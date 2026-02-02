@@ -1,44 +1,103 @@
+
 body {
-    background-color: #f5f7fb;
-   
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #eaeaff;
+  background: radial-gradient(circle at top, #1b1f3b, #050512);
+  min-height: 100vh;
 }
 
-.card-box{
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 70% 60%, white, transparent),
+    radial-gradient(1px 1px at 40% 80%, white, transparent),
+    radial-gradient(1px 1px at 90% 20%, white, transparent);
+  opacity: 0.6;
+  z-index: -1;
 }
+
+
+.card-box {
+  background: rgba(20, 25, 60, 0.75);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 0 25px rgba(120, 100, 255, 0.25);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 40px rgba(120, 100, 255, 0.5);
+}
+
 
 .profile-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 16px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #7b7bff;
+  box-shadow: 0 0 20px #7b7bff;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+p {
+  color: #cfd3ff;
+}
+
+
 .tag {
-border: 1px solid #dee2e6;
-padding: 6px 12px;
-border-radius: 20px;
-font-size: 14px;
-margin: 4px;
-display: inline-block;
-background: #f8f9fa;
+  border: 1px solid #7b7bff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 4px;
+  display: inline-block;
+  color: #ffffff;
+  background: rgba(123, 123, 255, 0.15);
 }
 
 
 .social-btn {
-border: 1px solid #dee2e6;
-padding: 6px 14px;
-border-radius: 10px;
-text-decoration: none;
-color: #333;
-margin-right: 6px;
-font-size: 14px;
+  border: 1px solid #7b7bff;
+  padding: 6px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 6px;
+  font-size: 14px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.social-btn:hover {
+  background: #7b7bff;
+  box-shadow: 0 0 12px #7b7bff;
+  color: #fff;
+}
+
+/* ===== PROJECT IMAGES ===== */
+img.rounded {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(120, 100, 255, 0.5);
 }
 
 
-.social-btn:hover {
-background: #f1f1f1;
+a {
+    color: inherit; /* Takes the color of surrounding text */
+    text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+  color: #ffffff;
 }
