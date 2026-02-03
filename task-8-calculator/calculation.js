@@ -54,8 +54,8 @@ function calculate(){
 }
 
 function clearDisplay() {
-    currentInput = '0';
+    currentInput = '';
     currentOperation = '';
     previousInput = '';
-    document.getElementById('display').value = '';
+    document.getElementById('display').value = '0';
 }
