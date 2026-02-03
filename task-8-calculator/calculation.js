@@ -3,10 +3,10 @@ let currentOperation = '';
 let previousInput = '';
 
 function appendNumber(number) {
-    currentinput += number;
-    document.getElementById('display').value = '${previousInput} ${currentOperation} ${currentInput}';
-
+    currentInput += number;
+    document.getElementById('display').value = `${previousInput} ${currentOperation} ${currentInput}`;
 }
+
 
 function appendOperation(operation){
     if (currentInput === '') return;
@@ -16,7 +16,7 @@ function appendOperation(operation){
     currentOperation = operation;
     previousInput = currentInput;
     currentInput = '';
-    document.getElementById('display').value = '${previousInput} ${currentOperation}';
+    document.getElementById('display').value = `${previousInput} ${currentOperation}`;
 
 }
 
@@ -54,7 +54,7 @@ function calculate(){
 }
 
 function clearDisplay() {
-    currentInput = '';
+    currentInput = '0';
     currentOperation = '';
     previousInput = '';
     document.getElementById('display').value = '';
