@@ -7,9 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Dev Mini-Quest</title>
-    <script>
-
-    </script>
+    
 </head>
 <body>
 <div class = "container py-5">
@@ -17,10 +15,10 @@
         <div class = "col-12 col-md-8 col-lg-6">
             <div class= "card shadow-sm " >
                 <div class="card-body">
-                        <span class="badge text-bg-primary">Level 3</span>
+                        <i id="badge" class="badge text-bg-primary">Level 1</i>
                         <h5 class ="card-title"><strong>JavaScript: Level Up</strong></h5>
-                        <p class="card-text">Click the button to increase the level number.</p>
-                            <button type = "button" class="btn bg-success text-white w-100 mb-2" onclick = "levelup()"><i class="bi bi-arrow-up-circle-fill"></i> Level Up</button>
+                        <p id = "text" class="card-text">Click the button to increase the level number.</p>
+                            <button id = "levelup-button" type = "button" class="btn bg-success text-white w-100 mb-2"><i class="bi bi-arrow-up-circle-fill"></i> Level Up</button>
                         <div class = "d-flex gap-2 ">
                             <button type = "button" class="btn bg-secondary text-white w-50" onclick = "location.href='level-2.html'">Back</button> 
                             <button type = "button" class="btn bg-primary text-white w-50" onclick = "location.href='level-4.html'">Next</button>
@@ -30,6 +28,23 @@
         </div>
     </div>
 </div>
+<script>
+        let level = 1;
+        const badge = document.getElementById('badge');
+        const text = document.getElementById('text');
+        const button = document.getElementById('levelup-button');
 
+        button.addEventListener('click', () => {~
+            if (level < 6) {
+            level++;
+            badge.textContent = `Level ${level}`;
+            text.textContent = `Congratulations! You've reached Level ${level}. Keep going!`;
+            }
+            else{
+                badge.textContent = `Level 6`;
+                text.textContent = `Amazing! You've reached the maximum level. Great job!`;
+            }
+            });
+    </script>
 </body>
 </html>
