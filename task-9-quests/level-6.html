@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 6</title>
+</head>
+<body>
+<div class = "container py-5">
+    <div class = "row justify-content-md-center">
+        <div class = "col-12 col-md-8 col-lg-6">
+            <div class= "card shadow-sm " >
+                <div class="card-body">
+                    <span class="badge text-bg-primary">Level 6</span>
+                    <h5 class ="card-title">Conditionals: Pick the Correct Door</h5>
+                    <p class="card-text text-muted">Click a door. Only one is correct. Use <strong>if/else</strong></p>
+                    <div class="d-flex gap-2">
+                        <button id="door1" class="btn btn-success flex-fill" type="button"><i class = "bi bi-door-open"></i> Door 1</button>
+                        <button id="door2" class="btn btn-warning flex-fill" type="button"><i class = "bi bi-door-open"></i> Door 2</button>
+                        <button id="door3" class="btn btn-danger flex-fill" type="button"><i class = "bi bi-door-open"></i> Door 3</button>
+                    </div>
+                    <div id="resultMessage" class="alert alert-secondary mt-3 mb-0">Choose a door to see the result.</div>
+                    <hr>
+                    <div class = "d-flex gap-2 ">
+                        <button type = "button" class="btn bg-secondary text-white w-50" onclick = "location.href='level-5.html'"><i class="bi bi-arrow-left"></i> Back</button>
+                        <button type = "button" class="btn bg-black text-white w-50" onclick = "location.href='level-1.html'"><i class="bi bi-arrow-clockwise"></i>Restart (Level 1)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const door1 = document.getElementById('door1');
+    const door2 = document.getElementById('door2');
+    const door3 = document.getElementById('door3');
+    const resultMessage = document.getElementById('resultMessage');
+
+    door2.addEventListener('click', () => {
+        resultMessage.textContent = 'Congratulations! You found the correct door!';
+        resultMessage.className = 'alert alert-success mt-3 mb-0';
+    });
+
+    door1.addEventListener('click', () => {
+        resultMessage.textContent = 'Oh no! This is the wrong door. Try again!';
+        resultMessage.className = 'alert alert-danger mt-3 mb-0';
+    });
+
+    door3.addEventListener('click', () => {
+        resultMessage.textContent = 'Oh no! This is the wrong door. Try again!';
+        resultMessage.className = 'alert alert-danger mt-3 mb-0';
+    });
+</script>
+</body>
+</html>
